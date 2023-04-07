@@ -1,0 +1,41 @@
+---
+import { navLinks } from "../data";
+---
+
+<header class="header">
+  <nav class="nav container" aria-label="Main Navigation" role="navigation">
+    <a href="#" class="nav__logo">
+      <picture>
+        <source media="(min-width: 769px)" srcset="logo-md.svg" />
+        <img src="logo-sm.svg" alt="logo" />
+      </picture>
+    </a>
+    <ul class="nav__list">
+      {
+        navLinks.map((link) => (
+          <li class="nav__item">
+            <a
+              href={`${link.url}`}
+              aria-label={`Go to the ${link.title} section`}
+              class="nav__link"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="24"
+                class="nav__icon"
+                height="24"
+              >
+                <path d={link.logo} />
+              </svg>
+              <span class="nav__name">{link.title}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>
+
+<script src="../js/navbar.js"></script>
