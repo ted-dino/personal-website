@@ -1,0 +1,9 @@
+@charset 'utf-8';
+
+@forward "base";
+@forward "utils";
+
+body {
+  background-color: var(--body-bg);
+  color: var(--text-white);
+}
