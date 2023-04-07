@@ -68,7 +68,7 @@
       font-size: inherit;
       letter-spacing: 2px;
 
-      @include u.breakpoint-sm(sm) {
+      @include u.breakpoint-max(sm) {
         display: none;
       }
     }
