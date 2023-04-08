@@ -1,0 +1,63 @@
+---
+import { footerSocialLink, navLinks } from "../data";
+---
+
+<footer class="footer">
+  <section id="contact" class="footer-content">
+    <h3 class="footer-heading">Have any project in mind?</h3>
+    <p class="footer-subheading">I'm here to help with your project.</p>
+    <div class="footer-links">
+      <ul class="footer-list">
+        {
+          footerSocialLink.map((link) => (
+            <li>
+              <a href={link.url} aria-label={link.alt} target="_blank">
+                <img src={link.src} alt={link.alt} width="40" height="40" />
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <nav class="footer-navigation">
+        <ul class="footer-list">
+          {
+            navLinks.map((link) => (
+              <li class="footer__item">
+                <a
+                  href={`${link.url}`}
+                  aria-label={`Go to the ${link.title} section`}
+                  class="footer__navLink"
+                >
+                  <span class="footer__navName">{link.title}</span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+    </div>
+    <p class="footer-copyright">
+      Copyright &copy;<span id="year"></span> All rights reserved | Have a great
+      <span id="day"></span>
+    </p>
+  </section>
+</footer>
+
+<script>
+  const year = document.getElementById("year");
+  const day = document.getElementById("day");
+  const dayNames = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  const today = new Date();
+
+  year.textContent = today.getFullYear().toString();
+  day.textContent = `${dayNames[today.getDay()]}!`;
+</script>
