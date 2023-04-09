@@ -2,6 +2,8 @@
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
+import Projects from "../components/Projects.astro";
+import Stack from "../components/Stack.astro";
 import "../styles/main.scss";
 ---
 
@@ -14,10 +16,12 @@ import "../styles/main.scss";
     <title>Astro</title>
   </head>
   <body>
-    <div class="container hide">
+    <div class="container">
       <Header />
       <main>
         <Hero />
+        <Stack />
+        <Projects />
       </main>
       <Footer />
     </div>

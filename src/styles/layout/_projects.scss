@@ -1,0 +1,101 @@
+@use "../utils" as u;
+
+#portfolio {
+  .project-card {
+    margin-top: 6rem;
+    display: grid;
+    text-align: start;
+    gap: 1.375rem;
+
+    &:nth-last-of-type(2) .project-card__content p::before {
+      content: "Hackathon Project: ";
+      font-weight: bold;
+      color: var(--text-white);
+    }
+
+    @include u.breakpoint(large) {
+      margin-top: 8rem;
+      grid-template-columns: repeat(2, 1fr);
+
+      &:nth-last-of-type(2) picture {
+        order: 2;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    picture {
+      img {
+        width: 100%;
+
+        @include u.breakpoint(large) {
+          width: auto;
+        }
+      }
+    }
+
+    &__title {
+      margin-bottom: 18px;
+      font-size: clamp(1.13rem, calc(0.78rem + 1.7vw), 1.88rem);
+      line-height: 1.1;
+      letter-spacing: 1.2px;
+    }
+
+    &__description {
+      font-size: clamp(1rem, calc(0.89rem + 0.57vw), 1.25rem);
+      color: var(--text-gray);
+      font-family: var(--ff-secondary-font);
+    }
+
+    &__links {
+      margin-top: auto;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    &__link-item {
+      background-color: var(--btn-primary);
+      border-radius: 5px;
+      transition: 0.2s;
+
+      a {
+        padding: 5px 10px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        font-family: var(--ff-primary-font);
+
+        img {
+          display: none;
+
+          @include u.breakpoint(medium) {
+            display: block;
+          }
+        }
+      }
+      &:hover,
+      &:focus {
+        scale: (0.8);
+      }
+    }
+
+    &__tags {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      & > * {
+        font-family: var(--ff-secondary-font);
+        padding: 5px;
+        border-radius: 5px;
+        border: 2px solid var(--text-white);
+        color: var(--text-gray);
+      }
+    }
+  }
+}
