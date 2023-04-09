@@ -9,13 +9,13 @@
 }
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 50px;
+  scroll-padding-top: 49px;
+  overflow: auto;
 }
 
 body {
   line-height: 1.5;
   min-height: 100vh;
-  scroll-behavior: smooth;
 }
 
 img {
