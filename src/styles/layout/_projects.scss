@@ -2,10 +2,14 @@
 
 #portfolio {
   .project-card {
-    margin-top: 6rem;
+    margin-top: 3.5rem;
     display: grid;
     text-align: start;
     gap: 1.375rem;
+
+    @include u.breakpoint(large) {
+      margin-top: 5rem;
+    }
 
     &:nth-last-of-type(2) .project-card__content p::before {
       content: "Hackathon Project: ";
@@ -17,8 +21,14 @@
       margin-top: 8rem;
       grid-template-columns: repeat(2, 1fr);
 
-      &:nth-last-of-type(2) picture {
-        order: 2;
+      &:nth-last-of-type(2) {
+        picture {
+          order: 2;
+        }
+        .project-card__content .project-card__links {
+          margin-top: auto;
+          margin-bottom: 1.125rem;
+        }
       }
     }
 
@@ -57,7 +67,8 @@
       gap: 1.25rem;
 
       @include u.breakpoint(large) {
-        margin-block: auto;
+        margin-top: auto;
+        margin-bottom: 1.125rem;
       }
     }
     &__link-item {

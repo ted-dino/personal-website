@@ -1,12 +1,13 @@
 @use "../utils" as u;
 
 .about {
-  padding-block: 7.5rem;
+  padding-block: 5rem;
   display: grid;
   place-items: center;
   gap: 2rem;
 
   @include u.breakpoint(large) {
+    padding-block: 8rem;
     grid-template-columns: repeat(2, 1fr);
   }
 
