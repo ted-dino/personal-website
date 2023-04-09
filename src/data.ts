@@ -43,3 +43,87 @@ export const footerSocialLink = [
     src: "/footer-links/linkedin.svg",
   },
 ];
+
+export const stacks = [
+  {
+    logo: "/stack/typescript.svg",
+    name: "typescript",
+  },
+  {
+    logo: "/stack/astro.svg",
+    name: "astro",
+  },
+  {
+    logo: "/stack/nextjs.svg",
+    name: "nextjs",
+  },
+  {
+    logo: "/stack/tailwind.svg",
+    name: "tailwind",
+  },
+  {
+    logo: "/stack/sass.svg",
+    name: "sass",
+  },
+  {
+    logo: "/stack/figma.svg",
+    name: "figma",
+  },
+];
+
+export const projects = [
+  {
+    thumbnail: {
+      lg: "/project-thumbnails/edie__lg.webp",
+      default: "/project-thumbnails/edie__sm.webp",
+    },
+    title: "Edie Homepage",
+    description:
+      "I created a responsive static website using HTML and CSS, organized with the BEM naming convention for easy maintenance. By doing this project, I learned how to optimize images and use semantic HTML which helped me improve my web development skills.",
+    links: {
+      linkPreview:
+        "https://ted-dino.github.io/responsive-web-developer/edie-homepage/",
+      githubLink:
+        "https://github.com/ted-dino/responsive-web-developer/tree/main/edie-homepage",
+    },
+
+    tags: ["Figma to HTML"],
+  },
+  {
+    thumbnail: {
+      lg: "/project-thumbnails/scratch-paint__lg.webp",
+      default: "/project-thumbnails/scratch-paint__sm.webp",
+    },
+    title: "Scratch Paint",
+    description:
+      "A Paint App where you can paint whatever you like, with whatever color you desire.",
+    links: {
+      linkPreview: "https://scratch-paint.netlify.app/",
+      githubLink: "https://github.com/ted-dino/scratch-paint",
+    },
+
+    tags: ["Figma to HTML", "React", "SASS", "Hackathon"],
+  },
+  {
+    thumbnail: {
+      lg: "/project-thumbnails/auth-app__lg.webp",
+      default: "/project-thumbnails/auth-app__sm.webp",
+    },
+    title: "Authentication App",
+    description:
+      "This project was challenging as my first experience with authentication, but it provided a valuable learning opportunity. I gained knowledge in setting up authentication and connecting to a database, while also improving my debugging and documentation skills.",
+    links: {
+      linkPreview: "https://authentication-app-taupe.vercel.app/",
+      githubLink: "https://github.com/ted-dino/authentication-app",
+    },
+
+    tags: [
+      "Figma to HTML",
+      "Planetscale",
+      "Tailwind CSS",
+      "Prisma",
+      "Next.js",
+      "CRUD",
+    ],
+  },
+];
