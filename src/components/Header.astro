@@ -4,10 +4,17 @@ import { navLinks } from "../data";
 
 <header class="header">
   <nav class="nav container" aria-label="Main Navigation" role="navigation">
-    <a href="#" class="nav__logo">
+    <a href="#home" class="nav__logo">
       <picture>
         <source media="(min-width: 769px)" srcset="logo-md.svg" />
-        <img src="logo-sm.svg" alt="logo" />
+        <img
+          src="logo-sm.svg"
+          alt="logo"
+          width="50"
+          height="50"
+          loading="lazy"
+          decoding="async"
+        />
       </picture>
     </a>
     <ul class="nav__list">
