@@ -1,0 +1,50 @@
+@use "../utils" as u;
+
+#skills {
+  text-align: center;
+
+  .stack {
+    margin-top: 1.875rem;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(auto-fit, minmax(4.375rem, 1fr));
+    place-items: center;
+    position: relative;
+    transition: all 0.5s;
+    cursor: pointer;
+
+    @include u.breakpoint(medium) {
+      margin-top: 4.375rem;
+    }
+
+    &__card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__logo,
+    &__name {
+      transition: all 0.5s;
+    }
+
+    &__logo:hover,
+    &__logo:focus {
+      scale: (0.8);
+      opacity: 0.5;
+    }
+
+    &__logo:hover + .stack__name {
+      scale: (1);
+      opacity: 1;
+    }
+
+    &__name {
+      margin-top: 0.625rem;
+      text-transform: capitalize;
+      opacity: 0;
+      scale: 0;
+      letter-spacing: 1.5px;
+    }
+  }
+}

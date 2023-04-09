@@ -1,0 +1,26 @@
+---
+import { stacks } from "../data";
+---
+
+<section id="skills" class="padding-x">
+  <h2 class="section-heading">My Tech Stack</h2>
+  <p class="section-paragraph">My experience includes but not limited</p>
+  <div class="stack">
+    {
+      stacks.map((stack) => (
+        <figure class="stack__card">
+          <img
+            class="stack__logo"
+            src={stack.logo}
+            alt={`${stack.name} logo`}
+            width="70"
+            height="70"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption class="stack__name">{stack.name}</figcaption>
+        </figure>
+      ))
+    }
+  </div>
+</section>
