@@ -38,10 +38,10 @@
     }
 
     &__title {
-      margin-bottom: 18px;
+      margin-bottom: 1.125rem;
       font-size: clamp(1.13rem, calc(0.78rem + 1.7vw), 1.88rem);
       line-height: 1.1;
-      letter-spacing: 1.2px;
+      letter-spacing: 0.075rem;
     }
 
     &__description {
@@ -51,21 +51,24 @@
     }
 
     &__links {
-      margin-top: auto;
-      margin-block: 18px;
+      margin-block: 1.125rem;
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 1.25rem;
+
+      @include u.breakpoint(medium) {
+        margin-block: auto;
+      }
     }
     &__link-item {
       background-color: var(--btn-primary);
-      border-radius: 5px;
+      border-radius: 0.3125rem;
       transition: 0.2s;
 
       a {
-        padding: 5px 10px;
+        padding: 0.3125rem 0.625rem;
         display: flex;
-        gap: 10px;
+        gap: 0.625rem;
         align-items: center;
         font-family: var(--ff-primary-font);
 
@@ -87,13 +90,13 @@
       display: flex;
       align-items: center;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 0.625rem;
 
       & > * {
         font-family: var(--ff-secondary-font);
-        padding: 5px;
-        border-radius: 5px;
-        border: 2px solid var(--text-white);
+        padding: 0.3125rem;
+        border-radius: 0.3125rem;
+        border: 0.125rem solid var(--text-white);
         color: var(--text-gray);
       }
     }

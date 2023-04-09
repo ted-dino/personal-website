@@ -12,7 +12,7 @@
     content: "";
     position: absolute;
     bottom: 0;
-    height: 5px;
+    height: 0.3125rem;
     width: 100%;
     background-color: var(--btn-primary);
   }
@@ -32,11 +32,11 @@
 
   &-content {
     text-align: center;
-    letter-spacing: 1.5px;
-    font-size: 14px;
+    letter-spacing: 0.0938rem;
+    font-size: 0.875rem;
 
     .footer-list {
-      margin-block: 20px;
+      margin-block: 1.25rem;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
