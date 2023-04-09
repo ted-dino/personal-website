@@ -8,3 +8,40 @@ body {
   background-color: var(--body-bg);
   color: var(--text-white);
 }
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--ff-primary-font);
+}
+
+p,
+a,
+figcaption,
+button {
+  font-family: var(--ff-secondary-font);
+}
+
+.section-heading {
+  font-size: clamp(1.88rem, calc(1.7rem + 0.85vw), 2.25rem);
+}
+
+.section-paragraph {
+  font-size: clamp(1.13rem, calc(0.95rem + 0.85vw), 1.5rem);
+  color: var(--text-gray);
+}
+
+.container {
+  width: min(90%, 75rem);
+  margin-inline: auto;
+}
+
+.scroll-header {
+  box-shadow: 0 0 10px 5px rgba(8, 8, 11, 0.5);
+}
+
+.padding-x {
+  padding-block: 3.125rem;
+  text-align: center;
+}
