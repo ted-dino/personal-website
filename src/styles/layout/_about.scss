@@ -16,6 +16,11 @@
     place-items: center;
     gap: 1.25rem;
 
+    img {
+      height: auto;
+      width: 100%;
+    }
+
     & img:nth-child(1) {
       grid-row: span 2;
     }
