@@ -3,6 +3,7 @@
   font-size: 400;
   src: url("/fonts/raleway/raleway-regular.woff2") format("woff2"),
     url("/fonts/raleway/raleway-regular.woff") format("woff");
+  font-display: swap;
 }
 
 @font-face {
@@ -10,6 +11,7 @@
   font-size: 600;
   src: url("/fonts/raleway/raleway-semibold.woff2") format("woff2"),
     url("/fonts/raleway/raleway-semibold.woff") format("woff");
+  font-display: swap;
 }
 
 @font-face {
@@ -17,6 +19,7 @@
   font-size: 400;
   src: url("/fonts/poppins/poppins-regular.woff2") format("woff2"),
     url("/fonts/poppins/poppins-regular.woff") format("woff");
+  font-display: swap;
 }
 
 @font-face {
@@ -24,4 +27,5 @@
   font-size: 700;
   src: url("/fonts/poppins/poppins-bold.woff2") format("woff2"),
     url("/fonts/poppins/poppins-bold.woff") format("woff");
+  font-display: swap;
 }

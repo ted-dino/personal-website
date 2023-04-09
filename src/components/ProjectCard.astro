@@ -21,8 +21,8 @@ const { picture, title, description, links, tags } = Astro.props;
     <source media="(min-width: 500px)" srcset={picture.lg} />
     <img
       src={picture.default}
-      width="435"
-      height="auto"
+      width="100%"
+      height="100%"
       alt="project thumbnail"
       loading="lazy"
       decoding="async"

@@ -6,7 +6,7 @@
   place-items: center;
   gap: 2rem;
 
-  @include u.breakpoint(medium) {
+  @include u.breakpoint(large) {
     grid-template-columns: repeat(2, 1fr);
   }
 
