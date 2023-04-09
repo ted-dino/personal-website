@@ -1,0 +1,66 @@
+@use "../utils" as u;
+
+.hero {
+  padding-top: 5rem;
+  display: grid;
+  height: 100vh;
+  place-items: center;
+
+  @include u.breakpoint(medium) {
+    padding-top: 8rem;
+  }
+
+  @include u.breakpoint(large) {
+    gap: 1.25rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+
+    @include u.breakpoint(medium) {
+      width: 80%;
+      margin-inline: auto;
+    }
+
+    @include u.breakpoint(large) {
+      align-items: start;
+      text-align: left;
+      width: 100%;
+    }
+
+    h1 {
+      color: var(--text-white);
+      font-size: clamp(2.19rem, calc(2.05rem + 0.71vw), 2.5rem);
+      text-transform: capitalize;
+    }
+
+    p {
+      font-family: var(--ff-secondary-font);
+      line-height: 1.4;
+      font-size: clamp(1.13rem, calc(0.92rem + 1.03vw), 1.5rem);
+      color: var(--text-gray);
+    }
+    a {
+      font-family: var(--ff-secondary-font);
+      padding: 0.9375rem;
+      font-size: clamp(1rem, calc(0.89rem + 0.57vw), 1.25rem);
+      border: none;
+      border-radius: 10px;
+      color: var(--text-white);
+      background-color: var(--btn-primary);
+    }
+  }
+
+  &__image-container {
+    display: none;
+
+    @include u.breakpoint(large) {
+      display: block;
+    }
+  }
+}
