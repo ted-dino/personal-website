@@ -4,10 +4,28 @@ const torch = document.querySelector(".torch");
 const modal = document.querySelector("#dialog");
 const closeBtn = document.querySelector("#class-modal");
 
-document.addEventListener("mousemove", function (event) {
-  torch.style.top = event.pageY + "px";
-  torch.style.left = event.pageX + "px";
-});
+const userAgent = navigator.userAgent.toLowerCase();
+let startX, startY;
+
+if (/mobile|tablet|ip(ad|od)|android/i.test(userAgent)) {
+  document.addEventListener("touchstart", (event) => {
+    startX = event.touches[0].clientX;
+    startY = event.touches[0].clientY;
+  });
+
+  document.addEventListener("touchmove", (event) => {
+    const deltaX = event.touches[0].clientX;
+    const deltaY = event.touches[0].clientY;
+
+    torch.style.top = `${deltaY}px`;
+    torch.style.left = `${deltaX}px`;
+  });
+} else {
+  document.addEventListener("mousemove", function (event) {
+    torch.style.top = event.pageY + "px";
+    torch.style.left = event.pageX + "px";
+  });
+}
 
 easter.addEventListener("click", () => {
   modal.show();

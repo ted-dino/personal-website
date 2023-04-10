@@ -4,7 +4,7 @@
 main {
   position: relative;
   height: 100vh;
-  font-family: var(--ff-primary-font);
+  font-family: var(--ff-secondary-font);
 
   display: flex;
   align-items: center;
@@ -14,6 +14,7 @@ main {
   overflow: hidden;
 
   .error-container {
+    position: relative;
     display: grid;
     width: 90%;
     @include u.breakpoint(large) {
@@ -28,7 +29,8 @@ main {
     }
     a {
       margin-top: 20px;
-      padding: 10px 15px;
+      padding: 10px 0;
+      font-size: clamp(1.25rem, calc(-0.62rem + 3.91vw), 1.88rem);
       width: fit-content;
       z-index: 10;
       transition: opacity 800ms;
@@ -64,7 +66,7 @@ main {
   #easter {
     position: absolute;
     right: 20px;
-    top: 34.375rem;
+    bottom: 0;
     z-index: 10;
 
     height: 50px;
