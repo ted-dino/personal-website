@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/sitemap": "^1.2.2",
     "astro": "^2.2.0",
+    "canvas-confetti": "^1.6.0",
     "sass": "^1.61.0",
     "scrollreveal": "^4.0.9"
   }
