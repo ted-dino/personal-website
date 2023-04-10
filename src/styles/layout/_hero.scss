@@ -1,9 +1,8 @@
 @use "../utils" as u;
 
 .hero {
-  padding-top: 3rem;
+  padding-block: 7rem;
   display: grid;
-  height: 100vh;
   place-items: center;
 
   @include u.breakpoint(medium) {
@@ -13,6 +12,7 @@
   @include u.breakpoint(large) {
     gap: 1.25rem;
     grid-template-columns: repeat(2, 1fr);
+    height: 100vh;
   }
 
   &__content {
