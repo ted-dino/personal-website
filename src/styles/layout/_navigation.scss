@@ -9,6 +9,20 @@
   z-index: 100;
   transition: 0.4s;
 
+  .skip-nav-link {
+    padding: 0.625rem;
+    position: absolute;
+    left: 0.625rem;
+    transform: translateY(-120%);
+    background-color: var(--btn-primary);
+    color: var(--body-bg);
+    transition: transform 825ms ease-in-out;
+
+    &:focus {
+      transform: translateY(0);
+    }
+  }
+
   .nav {
     padding-block: 0.9375rem;
     display: flex;
