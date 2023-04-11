@@ -8,20 +8,11 @@
     gap: 1.375rem;
 
     @include u.breakpoint(large) {
-      margin-top: 5rem;
-    }
-
-    &:nth-last-of-type(2) .project-card__content p::before {
-      content: "Hackathon Project: ";
-      font-weight: bold;
-      color: var(--text-white);
-    }
-
-    @include u.breakpoint(large) {
-      margin-top: 8rem;
+      margin-top: 4.375rem;
       grid-template-columns: repeat(2, 1fr);
 
       &:nth-last-of-type(2) {
+        margin-block: 8rem;
         picture {
           order: 2;
         }
@@ -30,6 +21,12 @@
           margin-bottom: 1.125rem;
         }
       }
+    }
+
+    &:nth-last-of-type(2) .project-card__content p::before {
+      content: "Hackathon Project: ";
+      font-weight: bold;
+      color: var(--text-white);
     }
 
     &__content {

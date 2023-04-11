@@ -4,6 +4,8 @@
 @forward "utils";
 @forward "layout";
 
+@use "utils" as u;
+
 body {
   background-color: var(--body-bg);
   color: var(--text-white);
@@ -42,6 +44,10 @@ button {
 }
 
 .padding-x {
-  padding-top: 2rem;
+  padding-top: 4rem;
   text-align: center;
+
+  @include u.breakpoint(medium) {
+    padding-top: 6rem;
+  }
 }
