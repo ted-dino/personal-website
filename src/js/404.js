@@ -46,11 +46,11 @@ easter.addEventListener("click", () => {
       colors: ["#0f0e16", "#ffffff", "#a7a9be", "#ff8a05"],
     });
 
-    if (interval === 10) {
+    if (interval === 15) {
       clearInterval(timer);
       confetti.reset();
     }
-  }, 600);
+  }, 800);
 });
 
 closeBtn.addEventListener("click", () => {
