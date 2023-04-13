@@ -1,24 +1,46 @@
 import ScrollReveal from "scrollreveal";
+let preloaderDelay = 0;
+
+const delayArray = [1500, 2000, 2500, 3000, 3500];
+const randomIndex = Math.floor(Math.random() * delayArray.length);
+preloaderDelay = delayArray[randomIndex];
+
+window.addEventListener("load", () => {
+  const loader = document.querySelector(".preloader");
+  const container = document.querySelector(".container");
+  const htmlElement = document.documentElement;
+
+  setTimeout(() => {
+    htmlElement.style.overflow = "auto";
+    container.classList.remove("hide-container");
+    loader.remove();
+  }, preloaderDelay);
+});
+
+ScrollReveal().reveal(".header", {
+  opacity: 0,
+  delay: preloaderDelay + 200,
+});
 
 ScrollReveal().reveal("#home", {
-  interval: 200,
   distance: "50px",
-  delay: 100,
+  delay: preloaderDelay + 200,
   opacity: 0,
 });
 
 ScrollReveal().reveal("#home h1", {
   distance: "100px",
+  delay: preloaderDelay + 300,
 });
 
 ScrollReveal().reveal("#home p", {
   distance: "100px",
-  delay: 100,
+  delay: preloaderDelay + 300,
 });
 
 ScrollReveal().reveal("#home a", {
   distance: "150px",
-  delay: 200,
+  delay: preloaderDelay + 300,
 });
 
 ScrollReveal().reveal("#home img", {
