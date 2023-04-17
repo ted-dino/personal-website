@@ -3,7 +3,7 @@ const sections = document.querySelectorAll("section[id]");
 const footer = document.querySelector("footer");
 const navLinks = document.querySelectorAll(".nav__list a[href]");
 
-let currentSection = sections[0].getAttribute("id");
+let currentSection = "";
 
 navLinks[0].setAttribute("aria-current", "page");
 
@@ -18,7 +18,7 @@ function scrollActive() {
       `.nav__list a[href="#${sectionId}"]`
     );
 
-    if (footer.getBoundingClientRect().top <= 688) {
+    if (footer.getBoundingClientRect().top <= 718) {
       document
         .querySelector(".nav__list a[href*=contact]")
         .setAttribute("aria-current", "page");
@@ -43,10 +43,17 @@ function scrollActive() {
   });
 }
 
-window.addEventListener("scroll", scrollActive);
+["load", "scroll"].forEach((event) => {
+  window.addEventListener(event, scrollActive);
+});
 
 function scrollHeader() {
   if (this.scrollY >= 20) header.classList.add("scroll-header");
   else header.classList.remove("scroll-header");
 }
 window.addEventListener("scroll", scrollHeader);
+
+console.log(
+  "%cIf you are reading this, you are awesome! https://rb.gy/gsezo",
+  "color:orange;font-size:1.75rem;"
+);
