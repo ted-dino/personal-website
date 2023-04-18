@@ -2,24 +2,39 @@
 import "../styles/pages/_error.scss";
 ---
 
-<main>
-  <section aria-labelledby="error-heading" class="error-container">
-    <h1 id="error-heading">Error 404</h1>
-    <p>
-      The page you are looking for might have been removed, had its name changed
-      or is temporarily unavailable.
-    </p>
-    <p><strong>Error code:</strong> 500</p>
-    <a href="/">Return to homepage</a>
-    <span id="easter"></span>
-  </section>
-  <div class="torch"></div>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content="Frontend developer specialized in creating responsive and user-friendly web interfaces using HTML, CSS, and JavaScript. Proficient in modern front-end frameworks and tools with a focus on clean, maintainable, and efficient code."
+    />
+    <link rel="sitemap" href="/sitemap-index.html" />
+    <title>Page Not Found</title>
+  </head>
+  <body>
+    <main>
+      <section aria-labelledby="error-heading" class="error-container">
+        <h1 id="error-heading">Error 404</h1>
+        <p>
+          The page you are looking for might have been removed, had its name
+          changed or is temporarily unavailable.
+        </p>
+        <p><strong>Error code:</strong> 500</p>
+        <a href="/">Return to homepage</a>
+        <span id="easter"></span>
+      </section>
+      <div class="torch"></div>
 
-  <dialog id="dialog" class="dialog">
-    <h2>Awesome!</h2>
-    <p>You found the easter egg on my website!</p>
-    <button id="class-modal">Close</button>
-  </dialog>
-</main>
+      <dialog id="dialog" class="dialog">
+        <h2>Awesome!</h2>
+        <p>You found the easter egg on my website!</p>
+        <button id="class-modal">Close</button>
+      </dialog>
+    </main>
+  </body>
+</html>
 
 <script src="../js/404.js"></script>
