@@ -38,9 +38,9 @@ export const footerSocialLink = [
     src: "/footer-links/upwork.svg",
   },
   {
-    url: "https://www.linkedin.com/in/ted-dino/",
-    alt: "linkedin",
-    src: "/footer-links/linkedin.svg",
+    url: "https://github.com/ted-dino",
+    alt: "github",
+    src: "/footer-links/github.svg",
   },
 ];
 
